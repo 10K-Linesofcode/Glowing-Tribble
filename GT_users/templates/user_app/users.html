@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>GT_users</title>
+  </head>
+  <body>
+
+    <h1>GT_users list .......</h1>
+
+
+
+        {% if users %}
+
+        <ol>
+
+          {% for person in users %}
+
+          <li>User Info</li>
+          <ul>
+            <li>First_Name: {{person.first_name}}</li>
+              <li>Last_Name: {{person.last_name}}</li>
+                <li>emails: {{person.emails}}</li>
+          </ul>
+          {% endfor %}
+        </ol>
+
+        {% endif %}
+
+
+  </body>
+</html>
