@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 {% load static %}
 <html lang="en" dir="ltr">
   <head>
@@ -8,8 +8,42 @@
   </head>
   <body>
     <p></p>
+
     <h1> <b>Nature Images in HDef !</b> </h1>
     <img src="{% static "images/nature.jpg" %}" alt="">
     <h2> you are in first app page </h2>
   </body>
+</html> -->
+
+<!DOCTYPE html>
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Django level 2</title>
+    <link rel="stylesheet" href="{%static "css/GTstyle.css" %}">
+  </head>
+  <body>
+    <h1> This is Django level 2</h1>
+    <h2> here are your access records: </h2>
+    <div class="djangotwo">
+      {% if access_records %}
+      <table>
+        <thead>
+          <th>Site Name</th>
+          <th>Date Accessed</th>
+        </thread>
+        {% for acc in access_records %}
+        <tr>
+          <td>{{ acc.name }}</td>
+          <td>{{ acc.date }}</td>
+        </tr>
+        {% endfor %}
+      </table>
+      <p> NO ACCESS RECORDS FOUND </p>
+      {% endif %}
+    </div>
+  </body>
+
+
 </html>
