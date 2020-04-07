@@ -15,9 +15,9 @@
 
     <ul class="nav navbar-nav">
 
-      <li ><a class="navbar-brand" href="#">Brand</a></li>
-      <li ><a  class="navbar-link" href="#">Admin</a></li>
-      <li ><a  class="navbar-link" href="#">Others</a></li>
+      <li ><a class="navbar-brand" href="{% url 'index'%}">Brand</a></li>
+      <li ><a  class="navbar-link" href="{% url 'admin:index' %}">Admin</a></li>
+      <li ><a  class="navbar-link" href="{% url 'template_app:others' %}">Others</a></li>
     </ul>
 
   </div>
