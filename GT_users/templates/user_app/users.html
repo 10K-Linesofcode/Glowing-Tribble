@@ -3,14 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>GT_users</title>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
   <body>
 
-    <h1>GT_users list .......</h1>
+    <h1>Please signup here !</h1>
+
+    <form  method="POST">
+
+      {{form.as_p}}
+      {% csrf_token%}
+      <input type="submit" class="btn btn-primary" value="Submit">
 
 
+    </form>
 
-        {% if users %}
+
+        <!-- {% if users %}
 
         <ol>
 
@@ -25,7 +34,7 @@
           {% endfor %}
         </ol>
 
-        {% endif %}
+        {% endif %} -->
 
 
   </body>
