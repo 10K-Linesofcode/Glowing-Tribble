@@ -18,9 +18,12 @@ from django.urls import path
 from myapp.views import index
 from django.conf.urls import url, include
 from myapp import urls
+from myapp import views
 
 urlpatterns = [
 
+    url(r'^$',views.index, name = 'index'),
     url(r'^myapp/',include('myapp.urls')),
     path('admin/', admin.site.urls),
+
 ]
