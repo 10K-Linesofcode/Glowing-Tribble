@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+    <title>base</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-dark bg-dark">
+    <ul>
+      <a  class="navbar-brand badge badge-primary" href="{% url 'cbv_app:list'%}">School</a>
+      <a  class="navbar-link badge badge-primary"  href="{% url 'admin:index'%}">Admin</a>
+    </ul>
+
+        <!-- Navbar content -->
+      </nav>
+
+    </div>
+    <div class="container">
+      {% block body_block %}
+      {% endblock %}
+    </div>
+
+  </body>
+</html>
