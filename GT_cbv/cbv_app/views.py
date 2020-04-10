@@ -22,10 +22,10 @@ class IndexView(TemplateView):
 
 
 class SchoolListView(ListView):
-    context_object_name='schools_list'
+    #context_object_name='school_list'
     model= models.School
 
-class SchoolDetailVeiw(DetailView):
-    context_object_name='schools_detail'
-    models=models.School
-    template_name='cbv_app/school_detail.html'
+class SchoolDetailView(DetailView):
+    context_object_name = 'school_details'
+    model = models.School
+    template_name = 'cbv_app/school_detail.html'
